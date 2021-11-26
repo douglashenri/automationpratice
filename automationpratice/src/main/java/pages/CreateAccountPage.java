@@ -84,4 +84,63 @@ public class CreateAccountPage {
 	@FindBy(how= How.ID, using="submitAccount")
 	protected WebElement btregistrar;
 	
+	////////////////////////////////////////////////
+	
+	@FindBy(how= How.ID, using="email")
+	protected WebElement txtLogarEmail;
+	
+	@FindBy(how= How.ID, using="passwd")
+	protected WebElement txtLogarSenha;
+	
+	@FindBy(how= How.ID, using="SubmitLogin")
+	protected WebElement txtLogarEntrar;
+	
+	@FindBy(how= How.ID, using="search_query_top")
+	protected WebElement txtPesquisar;
+	
+	@FindBy(how= How.NAME, using="submit_search")
+	protected WebElement btPesquisar;	
+
+	@FindBy(how= How.CLASS_NAME, using="icon-th-list")
+	protected WebElement selectListFigura;
+	
+	@FindBy(how= How.ID, using="color_1")
+	protected WebElement selectColortFigura;
+	
+	@FindBy(how= How.ID, using="add_to_cart")
+	protected WebElement selectAddCarrinho;	
+	
+	@FindBy(how= How.XPATH, using="//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a")
+	protected WebElement selectCheckOut;
+	
+	@FindBy(how= How.XPATH, using="//*[@id=\"center_column\"]/p[2]/a[1]")
+	protected WebElement selectCheckOutContinuar;
+	
+	@FindBy(how= How.NAME, using="message")
+	protected WebElement txtObs;
+	
+	@FindBy(how= How.NAME, using="processAddress")
+	protected WebElement btEnderecoCotinuar;
+	
+	@FindBy(how= How.ID, using="cgv")
+	protected WebElement cbAceitarTermos;
+	
+	@FindBy(how= How.NAME, using="processCarrier")
+	protected WebElement btCotinuarEnvio;
+	
+	@FindBy(how= How.XPATH, using="//*[@id=\"HOOK_PAYMENT\"]/div[1]/div/p/a")
+	protected WebElement selectIrModoPagamento;
+	
+	@FindBy(how= How.XPATH, using="//*[@id=\"cart_navigation\"]/button/span") 
+	protected WebElement selectConfirmarPedido;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
