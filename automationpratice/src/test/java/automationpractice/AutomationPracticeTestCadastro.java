@@ -1,32 +1,29 @@
 package automationpractice;
 
 import static org.junit.Assert.*;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import actions.CreateAccountAction;
 import util.Constants;
 import util.DriverContext;
 
-public class AutomationPracticeTest {
+public class AutomationPracticeTestCadastro {
 
 	WebDriver driver;
 	CreateAccountAction account;
 
 	@Before
 	public void setUp() throws Exception {
-		System.setProperty("webdriver.chrome.driver", Constants.PATH_CHROMEDRIVE );
+		System.setProperty("webdriver.chrome.driver", Constants.PATH_CHROMEDRIVE);
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/");
 		driver.manage().window().maximize();
 		DriverContext.setDriver(driver);
 		account = new CreateAccountAction();
 	}
-	
 
 	@After
 	public void tearDown() throws Exception {
@@ -35,11 +32,11 @@ public class AutomationPracticeTest {
 	@Test
 	public void test() {
 		account.clicarSign();
-		account.preencherEmail("uninassaudglasas@yahoo.com.br");
+		account.preencherEmail("Douglas@yahoo.com.br");
 		account.clicarCreateAccount();
 		account.clicarMr();
-		account.preencherNome("Douglassas");
-		account.preencherSobreNome("Henriqueas");
+		account.preencherNome("Douglas");
+		account.preencherSobreNome("Henrique");
 		account.preencherSenha("123456");
 		account.selecionarDia("1");
 		account.selecionarMes("2");
@@ -57,8 +54,5 @@ public class AutomationPracticeTest {
 		account.preencherCelular("87654321");
 		account.preencherEnderecoAlter("Alternativo");
 		account.clicarRegistrar();
-		
-		
 	}
-
 }

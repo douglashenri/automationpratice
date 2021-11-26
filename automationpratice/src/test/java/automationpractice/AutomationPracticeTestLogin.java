@@ -1,13 +1,11 @@
 package automationpractice;
 
 import static org.junit.Assert.*;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import actions.CreateAccountAction;
 import util.Constants;
 import util.DriverContext;
@@ -19,14 +17,13 @@ public class AutomationPracticeTestLogin {
 
 	@Before
 	public void setUp() throws Exception {
-		System.setProperty("webdriver.chrome.driver", Constants.PATH_CHROMEDRIVE );
+		System.setProperty("webdriver.chrome.driver", Constants.PATH_CHROMEDRIVE);
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/");
 		driver.manage().window().maximize();
 		DriverContext.setDriver(driver);
 		account = new CreateAccountAction();
 	}
-	
 
 	@After
 	public void tearDown() throws Exception {
@@ -35,7 +32,7 @@ public class AutomationPracticeTestLogin {
 	@Test
 	public void test() {
 		account.clicarSign();
-		account.preencherEmailLogin("uninassaudglasas@yahoo.com.br");
+		account.preencherEmailLogin("Douglas@yahoo.com.br");
 		account.preencherSenhaLogin("123456");
 		account.clicarEntrarLogar();
 		account.preencherPesquisa("Faded Short Sleeve T-shirts");
@@ -51,8 +48,5 @@ public class AutomationPracticeTestLogin {
 		account.ClicarContinuarEnvio();
 		account.ClicarModoDePagamento();
 		account.ClicarConfirmarPedido();
-		
-		
 	}
-
 }

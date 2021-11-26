@@ -3,7 +3,6 @@ package actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import pages.CreateAccountPage;
 import util.DriverContext;
 
@@ -12,8 +11,10 @@ public class CreateAccountAction extends CreateAccountPage {
 	protected WebDriverWait wait;
 
 	public CreateAccountAction() {
-		wait = new WebDriverWait(DriverContext.getDriver(), 5);
+		wait = new WebDriverWait(DriverContext.getDriver(), 15);
 	}
+
+//////////////////////////////////////CADASTRO/////////////////////////////////////
 
 	public void clicarSign() {
 		wait.until(ExpectedConditions.elementToBeClickable(linkSigIn)).click();
@@ -128,61 +129,53 @@ public class CreateAccountAction extends CreateAccountPage {
 
 	public void preencherPesquisa(String pesquisa) {
 		wait.until(ExpectedConditions.visibilityOf(txtPesquisar)).sendKeys(pesquisa);
-
 	}
-	
+
 	public void clicarPesquisar() {
 		wait.until(ExpectedConditions.elementToBeClickable(btPesquisar)).click();
 	}
-	
+
 	public void clicarListFigura() {
 		wait.until(ExpectedConditions.elementToBeClickable(selectListFigura)).click();
 	}
-	
+
 	public void clicarColorFigura() {
 		wait.until(ExpectedConditions.elementToBeClickable(selectColortFigura)).click();
 	}
-	
+
 	public void ClicarAddCarrinho() {
 		wait.until(ExpectedConditions.elementToBeClickable(selectAddCarrinho)).click();
 	}
-	
+
 	public void ClicarCheckOut() {
 		wait.until(ExpectedConditions.elementToBeClickable(selectCheckOut)).click();
 	}
-	
+
 	public void ClicarCheckOutContinuar() {
 		wait.until(ExpectedConditions.elementToBeClickable(selectCheckOutContinuar)).click();
 	}
-	
+
 	public void preencherObs(String pesquisa) {
 		wait.until(ExpectedConditions.visibilityOf(txtObs)).sendKeys(pesquisa);
-
 	}
-	
+
 	public void ClicarEnderecoContinuar() {
 		wait.until(ExpectedConditions.elementToBeClickable(btEnderecoCotinuar)).click();
 	}
-	
+
 	public void ClicarAceitartermos() {
 		cbAceitarTermos.click();
 	}
-	
+
 	public void ClicarContinuarEnvio() {
 		wait.until(ExpectedConditions.elementToBeClickable(btCotinuarEnvio)).click();
 	}
-	
+
 	public void ClicarModoDePagamento() {
 		wait.until(ExpectedConditions.elementToBeClickable(selectIrModoPagamento)).click();
 	}
-	
+
 	public void ClicarConfirmarPedido() {
 		wait.until(ExpectedConditions.elementToBeClickable(selectConfirmarPedido)).click();
 	}
-	
-	
-	
-	
-	
-	
 }
