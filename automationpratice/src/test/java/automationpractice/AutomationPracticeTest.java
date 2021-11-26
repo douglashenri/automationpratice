@@ -35,11 +35,11 @@ public class AutomationPracticeTest {
 	@Test
 	public void test() {
 		account.clicarSign();
-		account.preencherEmail("uninassaudglasa@yahoo.com.br");
+		account.preencherEmail("uninassaudglasas@yahoo.com.br");
 		account.clicarCreateAccount();
 		account.clicarMr();
-		account.preencherNome("Douglassa");
-		account.preencherSobreNome("Henriquea");
+		account.preencherNome("Douglassas");
+		account.preencherSobreNome("Henriqueas");
 		account.preencherSenha("123456");
 		account.selecionarDia("1");
 		account.selecionarMes("2");
