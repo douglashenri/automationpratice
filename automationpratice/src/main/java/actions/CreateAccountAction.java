@@ -111,4 +111,5 @@ public class CreateAccountAction extends CreateAccountPage {
 	public void clicarRegistrar() {
 		wait.until(ExpectedConditions.elementToBeClickable(btregistrar)).click();
 	}
+	
 }
